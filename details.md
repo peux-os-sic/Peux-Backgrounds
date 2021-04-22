@@ -1,0 +1,1 @@
+Complete set of Peux OS backgrounds. The default location on your local drive would be "/usr/share/backgrounds/". Repository can be found at: https://github.com/peux-os-sic/Peux-Backgrounds
