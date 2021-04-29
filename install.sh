@@ -1,5 +1,10 @@
 #!/bin/bash
 
+###########################################################
+# Author - DN-debug
+# Description - Peux OS wallpaper collections' copy script
+###########################################################
+
 if zenity --question --text="Want to proceed?"
 then 
     PASSWD="$(zenity --password --title=Authentication)\n"
