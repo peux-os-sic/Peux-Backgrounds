@@ -1,6 +1,6 @@
 #!/bin/bash
 
-if zenity --question --text="Want to copy the configurations?"
+if zenity --question --text="Want to proceed?"
 then 
     PASSWD="$(zenity --password --title=Authentication)\n"
 
