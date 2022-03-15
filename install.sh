@@ -5,16 +5,21 @@
 # Description - Peux OS wallpaper collections' copy script
 ###########################################################
 
-if zenity --question --text="Want to proceed?"
-then 
-    PASSWD="$(zenity --password --title=Authentication)\n"
-
+if zenity --question --text="Want to copy the backgrounds?"
+then
     echo "changing directory"
     cd ../
-    echo -e $PASSWD | sudo -S cp -r Peux-Backgrounds/backgrounds/* /usr/share/backgrounds
-    rm -rf Peux-Backgrounds
-    notify-send "Copied the images"
-
+    mkdir $HOME/tmp
+    cp -r Peux-Backgrounds/ $HOME/tmp/
+    rm -rf $HOME/tmp/Peux-Backgrounds/install.sh
+    rm -rf $HOME/tmp/Peux-Backgrounds/.git
+    rm -rf $HOME/tmp/Peux-Backgrounds/details.md
+    notify-send "Copied the configurations to $HOME/tmp/"
 else
-    notify-send "Operation skipped!"
+    notify-send "skipping the setup!"
 fi
+
+# cleanup
+
+rm -rf /tmp/fetcher/Peux-Backgrounds
+notify-send "Done!"
